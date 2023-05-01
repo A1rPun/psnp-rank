@@ -1,14 +1,28 @@
 .App {
-  text-align: center;
-}
-
-.App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  min-height: 100vh;
+  gap: 32px;
+}
+
+.App-header {
+  background-color: #336291;
+  text-align: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.App-table {
+  background-color: #f1f5fd;
+  color: #000;
+  display: flex;
+  padding: 8px;
+  gap: 16px;
+  border-radius: 5px;
 }

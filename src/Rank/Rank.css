@@ -1,0 +1,55 @@
+.game-rank-container {
+  text-align: center;
+}
+
+.game-rank {
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 24px;
+  display: inline-block;
+  font-family: DP, Arial, Verdana, sans-serif;
+}
+
+.game-rank.S {
+  color: #667FB2;
+}
+
+.game-rank.A {
+  color: green;
+}
+
+.game-rank.B {
+  color: #7B9E00;
+}
+
+.game-rank.C {
+  color: #A68E00;
+}
+
+.game-rank.D {
+  color: #A66A00;
+}
+
+.game-rank.E {
+  color: #FF4100;
+}
+
+.game-rank.F {
+  color: #EE0000;
+}
+
+.game-rank-text {
+  font-size: 10px;
+  font-weight: bold;
+  line-height: 10px;
+  font-family: DP, Arial, Verdana, sans-serif;
+}
+
+.typo-bottom {
+	font-size: 11px;
+	text-transform: uppercase;
+	font-weight: 400;
+	font-family: 'DP', Arial, Verdana, sans-serif;
+	color: #44484b;
+	line-height: 14px;
+}
