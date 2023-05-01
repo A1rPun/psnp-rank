@@ -2,11 +2,11 @@ type rank = "S" | "A" | "B" | "C" | "D" | "E" | "F"
 
 const mapping = {
   F: 0,
-  E: 0.4,
-  D: 0.75,
-  C: 1.2,
-  B: 1.55,
-  A: 0,
+  E: 0,
+  D: 0.4,
+  C: 0.75,
+  B: 1.2,
+  A: 1.55,
   S: 0,
 }
 
@@ -25,18 +25,19 @@ export function calculate(rank: rank, n: number): string {
     return "0%"
   }
 
-  const needed = mapping[rank] * n
+  const num = n || 1
+  const needed = mapping[rank] * num
 
   if (rank === "E") {
-    return `${getPercentage(needed)}% - 1%`
+    return `${getPercentage(mapping.D * num - 1)}% - 1%`
   } else if (rank === "D") {
-    return `${getPercentage(needed)}% - ${getPercentage(mapping.E * n + 1)}%`
+    return `${getPercentage(mapping.C * num - 1)}% - ${getPercentage(needed)}%`
   } else if (rank === "C") {
-    return `${getPercentage(needed)}% - ${getPercentage(mapping.D * n + 1)}%`
+    return `${getPercentage(mapping.B * num - 1)}% - ${getPercentage(needed)}%`
   } else if (rank === "B") {
-    return `${getPercentage(needed)}% - ${getPercentage(mapping.C * n + 1)}%`
+    return `${getPercentage(mapping.A * num - 1)}% - ${getPercentage(needed)}%`
   } else if (rank === "A") {
-    return `99% - ${getPercentage(mapping.B * n + 1)}%`
+    return `99% - ${getPercentage(needed)}%`
   }
-  return ""
+  return "error%"
 }
