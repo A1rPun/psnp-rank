@@ -12,12 +12,12 @@ In the project directory, you can run:
 - `npm test`
 - `npm run build`
 
-
 # Inspired by
 
-- [This forum thread](https://forum.psnprofiles.com/topic/16382-boundaries-for-game-ranks/)
+- [This PSNP forum thread](https://forum.psnprofiles.com/topic/16382-boundaries-for-game-ranks/)
 - Ric
 - vivan000
+- [And this PSNP forum thread](https://forum.psnprofiles.com/topic/13623-ranking/)
 - aerosol_grey
 - Stevieboy
 
