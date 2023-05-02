@@ -14,7 +14,7 @@ function App() {
         <span>Game Average Completion:</span>
         <input
           type="number"
-          min="1"
+          min="0"
           max="100"
           value={percentage}
           onChange={(e: ChangeEvent<HTMLInputElement>) => setPercentage(parseInt(e.target.value, 10))}

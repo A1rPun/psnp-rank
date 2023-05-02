@@ -11,7 +11,7 @@ const mapping = {
 }
 
 function clamp(n: number): number {
-  return Math.max(Math.min(n, 99), 1)
+  return Math.max(Math.min(n, 99), 0)
 }
 
 function getPercentage(n: number): string {
@@ -25,11 +25,11 @@ export function calculate(rank: rank, n: number): string {
     return "0%"
   }
 
-  const num = n || 1
+  const num = n || 0
   const needed = mapping[rank] * num
 
   if (rank === "E") {
-    return `${getPercentage(mapping.D * num - 1)}% - 1%`
+    return `${getPercentage(mapping.D * num - 1)}% - 0%`
   } else if (rank === "D") {
     return `${getPercentage(mapping.C * num - 1)}% - ${getPercentage(needed)}%`
   } else if (rank === "C") {
