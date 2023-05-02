@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/psnp-rank/static/css/main.39268458.css",
-    "main.js": "/psnp-rank/static/js/main.5ec1803d.js",
+    "main.js": "/psnp-rank/static/js/main.1229c626.js",
     "static/js/787.813915be.chunk.js": "/psnp-rank/static/js/787.813915be.chunk.js",
     "index.html": "/psnp-rank/index.html",
     "main.39268458.css.map": "/psnp-rank/static/css/main.39268458.css.map",
-    "main.5ec1803d.js.map": "/psnp-rank/static/js/main.5ec1803d.js.map",
+    "main.1229c626.js.map": "/psnp-rank/static/js/main.1229c626.js.map",
     "787.813915be.chunk.js.map": "/psnp-rank/static/js/787.813915be.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.39268458.css",
-    "static/js/main.5ec1803d.js"
+    "static/js/main.1229c626.js"
   ]
 }
