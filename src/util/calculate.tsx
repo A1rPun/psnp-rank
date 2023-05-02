@@ -33,7 +33,7 @@ export function calculate(rank: rank, n: number): string {
   } else if (rank === "D") {
     return `${getPercentage(mapping.C * num - 1)}% - ${getPercentage(needed)}%`
   } else if (rank === "C") {
-    return `${getPercentage(mapping.B * num - 1)}% - ${getPercentage(needed)}%`
+    return `${getPercentage(mapping.B * num - (num < 3 ? 0 : 1))}% - ${getPercentage(needed)}%`
   } else if (rank === "B") {
     return `${getPercentage(mapping.A * num - 1)}% - ${getPercentage(needed)}%`
   } else if (rank === "A") {
