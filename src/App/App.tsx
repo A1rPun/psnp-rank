@@ -1,20 +1,36 @@
-import React, { useState } from 'react';
-import './App.css';
-import Rank from '../Rank/Rank';
-import AverageCompletion from '../AverageCompletion/AverageCompletion';
-import { mapping } from '../util/calculate';
-import { GameRank, HasPercentage } from '../util/types';
+import React, { useState } from "react";
+import "./App.css";
+import Rank from "../Rank/Rank";
+import AverageCompletion from "../AverageCompletion/AverageCompletion";
+import { mapping } from "../util/calculate";
+import { GameRank, HasPercentage } from "../util/types";
 
 const appName = "PSNProfiles Rank Calculator"
-const placeholderPercentage = 25
+const defaultPercentage = 25
 
 function App() {
+  const urlParams = new URLSearchParams(window.location.search)
+  const placeholderPercentage = urlParams.has("percentage")
+    ? parseInt(urlParams.get("percentage") ?? "", 10)
+    : defaultPercentage
+
   const [percentage, setPercentage] = useState(placeholderPercentage)
+  const updatePercentage = (percent: number) => {
+    setPercentage(percent)
+    const urlParams = new URLSearchParams();
+
+    if (percent !== defaultPercentage) {
+      urlParams.set("percentage", percent.toString())
+    }
+
+    const addParams = urlParams.toString() ? `?${urlParams}` : ""
+    window.history.replaceState({}, "", window.location.pathname + addParams)
+  }
 
   return <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
     <div className="mx-auto max-w-3xl">
       <Header />
-      <AverageCompletion percentage={percentage} onChange={setPercentage} />
+      <AverageCompletion percentage={percentage} onChange={updatePercentage} />
       <Ranks percentage={percentage} />
       <MoreInfo />
     </div>
@@ -35,7 +51,7 @@ function Ranks(props: HasPercentage): JSX.Element {
   const ranks: GameRank[] = ["S", "A", "B", "C", "D", "E", "F"]
 
   return <dl className="mt-1 grid grid-cols-3 gap-1 sm:grid-cols-7">
-    {ranks.map((rank) => <Rank rank={rank} {...props}></Rank>)}
+    {ranks.map((rank, i) => <Rank key={i} rank={rank} {...props}></Rank>)}
   </dl>
 }
 
@@ -48,7 +64,7 @@ function MoreInfo(): JSX.Element {
     <summary>More information</summary>
     <div className="mt-1 overflow-hidden rounded-lg shadow text-sm infopanel">
       <div className="px-4 py-5 sm:p-6">
-        <p>It's possible that a game doesn't have all ranks, games with an average completion between 2% and 64% do.</p>
+        <p>It"s possible that a game doesn"t have all ranks, games with an average completion between 2% and 64% do.</p>
         <br />
         <p>A rank can be calculated by using the following formula:</p>
         <p><strong><em>game average completion</em> * <em>x</em></strong> where x is</p>
