@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/psnp-rank/static/css/main.39268458.css",
-    "main.js": "/psnp-rank/static/js/main.1229c626.js",
+    "main.css": "/psnp-rank/static/css/main.937adb43.css",
+    "main.js": "/psnp-rank/static/js/main.9ba55141.js",
     "static/js/787.813915be.chunk.js": "/psnp-rank/static/js/787.813915be.chunk.js",
+    "static/media/PSNP_CCR.png": "/psnp-rank/static/media/PSNP_CCR.b6b209516950f7d985fa.png",
     "index.html": "/psnp-rank/index.html",
-    "main.39268458.css.map": "/psnp-rank/static/css/main.39268458.css.map",
-    "main.1229c626.js.map": "/psnp-rank/static/js/main.1229c626.js.map",
+    "main.937adb43.css.map": "/psnp-rank/static/css/main.937adb43.css.map",
+    "main.9ba55141.js.map": "/psnp-rank/static/js/main.9ba55141.js.map",
     "787.813915be.chunk.js.map": "/psnp-rank/static/js/787.813915be.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.39268458.css",
-    "static/js/main.1229c626.js"
+    "static/css/main.937adb43.css",
+    "static/js/main.9ba55141.js"
   ]
 }
