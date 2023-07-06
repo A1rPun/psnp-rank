@@ -7,7 +7,7 @@ interface AverageCompletionProps extends HasPercentage {
 }
 
 function AverageCompletion(props: AverageCompletionProps) {
-  return <div className="mt-1 shadow sm:rounded-lg infopanel">
+  return <div className="mt-1 shadow rounded-lg infopanel">
     <div className="px-4 py-5 sm:p-6">
       <Label />
       <Form {...props} />
